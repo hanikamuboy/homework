@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>선택자 더 알아보기</title>
+    <style>
+        /*
+        기호와 함께 사용하는 속성 선택자
+        * : 값의 포함 여부
+        ^ : 값의 시작 여부
+        $ : 값의 끝 여부
+        */
+        [width $="0"]{
+            border: 5px dashed black;
+        }
+
+        p > em{
+            color: blue;
+        }
+        /*
+        형제 선택자는 뒤이어 등장하는 형제들을 대상으로 한다!
+        */
+        #sam ~ img{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="images/슈나우저.jpeg" width="120" alt="강아지">
+    <img src="images/슈나우저.jpeg" width="120">
+    <img src="images/슈나우저.jpeg" width="120" id="sam">
+    <p>'슈나우저'라는 이름은 주둥이를 뜻하는 독일어 'schnauze'에서 따온 단어입니다.</p>
+    <p>푸들과 더불어 털이 거의 빠지지 않는 견종입니다.</p>
+    <p>중~근세 시대 <em>프로이센</em>의 귀족이나 왕족들을 연상케 하는 특유의 수염이 트레이드 마크입니다.</p>
+    <p>너무나도 쾌활한 성격을 가진 견종인지라 지랄견 랭킹 3위에 마크되어 있습니다.</p>
+</body>
+</html>
